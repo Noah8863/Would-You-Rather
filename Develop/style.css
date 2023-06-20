@@ -12,6 +12,10 @@ header {
 .hide {
     display: none;
 }
+.fadeIn {
+    animation: fadeIn 8s;
+}
+
 .startingScreen {
     position: relative;
     display:grid;
@@ -69,7 +73,10 @@ footer {
     bottom: -100px;
 }
 
-
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 @media screena and (max-width: 768px) {
     .mainContainer {
         grid-template-columns: auto;

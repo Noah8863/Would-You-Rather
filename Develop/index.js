@@ -9,12 +9,18 @@ const rightChoice = document.getElementById("rightButton");
 const leftResults = document.getElementById("leftResults");
 const rightResults = document.getElementById("rightResults");
 
+//Screen Variables
+const gameContainer = document.getElementById("questionsContainer");
+
 //Start Game Event Listener 
 startBtn.addEventListener("click", StartGame)
+startBtn.addEventListener("click", showQuestion)
+
 
 //In Game Event Listener
 leftChoice.addEventListener("click", showQuestion);
 rightChoice.addEventListener("click", showQuestion);
+
 
 
 
@@ -31,7 +37,12 @@ function StartGame(){
     leftSlider.classList.add("slide-left")
     rightSlider.classList.add("slide-right")
     startBtn.classList.add("hide")
+    FadeIn()
 }
+setTimeout(function FadeIn(){
+    gameContainer.classList.add("fadeIn")
+}, 1000);
+
 
 async function showQuestion() {
     try {
