@@ -1,5 +1,7 @@
 body {
     background-color: rgb(182, 181, 181);
+    margin:0;
+    padding:0;
 }
 header {
     margin: 20px;
@@ -7,6 +9,44 @@ header {
     font-size: 36px;
     padding: 10px;
 }
+.hide {
+    display: none;
+}
+.startingScreen {
+    position: relative;
+    display:grid;
+    grid-template-columns: auto auto;
+}
+.sliders {
+    position: absolute;
+    width:50vw;
+    height:100vh;
+    z-index: 2;
+    bottom:80%;
+}
+#leftSlider {
+    position: relative;
+    background-color: blue;
+}
+.slide-left {
+    transform: translate(-100%, 0px);
+    transition: transform 1.8s ease-in-out;
+}
+.slide-right {
+    transform: translate(100%, 0px);
+    transition: transform 1.8s ease-in-out;
+}
+#rightSlider {
+    position: relative;
+    background-color: green;
+}
+#startBtn {
+    position: absolute;
+    z-index: 3;
+    left: 45%;
+    top: 50%;
+}
+
 .mainContainer {
     position: relative;
     display:grid;

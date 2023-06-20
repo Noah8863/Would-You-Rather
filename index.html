@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Develop/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Develop/style.css" />
     <title>Would You Rather?</title>
-</head>
-<body>
-    <header>
-        <p>
-            Would You Rather?
+  </head>
+  <body>
+    <div class="questionsContainer">
+      <header>
+        <p>Would You Rather?</p>
+      </header>
+      <div class="mainContainer">
+        <div>
+          <button
+            class="btnChoices"
+            id="leftButton"
+            type="button"
+            style="background-color: rgb(29, 156, 240)"
+          >
+            Left button
+          </button>
+          <p id="leftResults">Text Under</p>
+        </div>
+        <p style="margin: auto">OR</p>
+    <div>
+          <button
+            class="btnChoices"
+            id="rightButton"
+            type="button"
+            style="background-color: rgb(240, 29, 29)"
+          >
+            Right button
+          </button>
+          <p id="rightResults">Text Under</p>
+        </div>
+      </div>
+      <footer>
+        <p style="font-size: 16px">
+          Select the choice you would rather do. After selecting the choice,
+          you'll see the majority choice
         </p>
-    </header>
-    <div class="mainContainer">
-        <div>
-            <button class="btnChoices" id="leftButton" type="button" style="background-color:rgb(29, 156, 240)">
-                Left button
-            </button>
-            <p id="leftResults">Text Under </p>
-        </div>
-        <p style="margin: auto;">OR</p>
-        <div>
-            <button class="btnChoices" id="rightButton" type="button" style="background-color:rgb(240, 29, 29)">
-                Right button
-            </button>
-            <p id="rightResults">Text Under </p>
-        </div>
-        
+      </footer>
     </div>
-    <footer>
-        <p style="font-size:16px">
-            Select the choice you would rather do. After selecting the choice, you'll see the majority choice
-        </p>
-    </footer>
-<script src="./Develop/index.js"></script>
-</body>
+    <button id="startBtn" type="button" onclick="startGame">
+        Click Me to Start
+    </button>
+    <div class="startingScreen">
+        <div class="sliders" id="leftSlider"></div>
+        <div class="sliders" id="rightSlider"></div>
+    </div>
+    <script src="./Develop/index.js"></script>
+  </body>
 </html>

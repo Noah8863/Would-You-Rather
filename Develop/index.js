@@ -1,11 +1,22 @@
+//Start Screen Variables
+const startBtn = document.getElementById("startBtn");
+const leftSlider = document.getElementById("leftSlider");
+const rightSlider = document.getElementById("rightSlider");
 
+//In Game Variables
 const leftChoice = document.getElementById("leftButton");
 const rightChoice = document.getElementById("rightButton");
 const leftResults = document.getElementById("leftResults");
 const rightResults = document.getElementById("rightResults");
 
+//Start Game Event Listener 
+startBtn.addEventListener("click", StartGame)
+
+//In Game Event Listener
 leftChoice.addEventListener("click", showQuestion);
 rightChoice.addEventListener("click", showQuestion);
+
+
 
 const url = 'https://would-you-rather.p.rapidapi.com/wyr/random';
 const options = {
@@ -16,11 +27,18 @@ const options = {
 	}
 };
 
+function StartGame(){
+    leftSlider.classList.add("slide-left")
+    rightSlider.classList.add("slide-right")
+    startBtn.classList.add("hide")
+}
+
 async function showQuestion() {
     try {
         const response = await fetch(url, options);
         const result = await response.text();
         console.log(result);
+        
     } catch (error) {
         console.error(error);
     }
