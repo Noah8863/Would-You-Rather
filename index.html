@@ -5,26 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Develop/style.css">
-    
-
     <title>Would You Rather?</title>
 </head>
 <body>
     <header>
-        Would You Rather?
+        <p>
+            Would You Rather?
+        </p>
     </header>
     <div class="mainContainer">
-        <button class="btnChoices" id="leftButton" type="button">
-            Left button
-        </button>
-        <button class="btnChoices" id="rightButton" type="button">
-            Right button
-        </button>
+        <div>
+            <button class="btnChoices" id="leftButton" type="button" style="background-color:rgb(29, 156, 240)">
+                Left button
+            </button>
+            <p>Text Under </p>
+        </div>
+        <p style="margin: auto;">OR</p>
+        <div>
+            <button class="btnChoices" id="rightButton" type="button" style="background-color:rgb(240, 29, 29)">
+                Right button
+            </button>
+            <p>Text Under </p>
+        </div>
+        
     </div>
-
-
-
-
+    <footer>
+        <p style="font-size:16px">
+            Select the choice you would rather do. After selecting the choice, you'll see the majority choice
+        </p>
+    </footer>
 <script src="./Develop/index.js"></script>
 </body>
 </html>

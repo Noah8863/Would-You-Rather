@@ -1,14 +1,34 @@
+body {
+    background-color: rgb(182, 181, 181);
+}
+header {
+    margin: 20px;
+    text-align: center;
+    font-size: 36px;
+    padding: 10px;
+}
 .mainContainer {
     position: relative;
-    background-color: grey;
     display:grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto 5% auto;
+    justify-content:center;
+    align-content: center;
+    margin: auto;
+    text-align: center;
 }
 .btnChoices {
     position: relative;
     width: 40vw;
-    height: 400px;
+    height: 300px;
+    margin: 20px;
+    font-size: larger;
 }
+footer {
+    position: relative;
+    text-align: center;
+    bottom: -100px;
+}
+
 
 @media screena and (max-width: 768px) {
     .mainContainer {
