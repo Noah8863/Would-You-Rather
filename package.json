@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/Noah8863/Would-You-Rather/issues"
   },
-  "homepage": "https://github.com/Noah8863/Would-You-Rather#readme",
-  "dependencies": {
-    "sass": "^1.63.4"
-  }
+  "homepage": "https://github.com/Noah8863/Would-You-Rather#readme"
 }
