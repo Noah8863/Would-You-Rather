@@ -1,0 +1,17 @@
+.mainContainer {
+    position: relative;
+    background-color: grey;
+    display:grid;
+    grid-template-columns: auto auto;
+}
+.btnChoices {
+    position: relative;
+    width: 40vw;
+    height: 400px;
+}
+
+@media screena and (max-width: 768px) {
+    .mainContainer {
+        grid-template-columns: auto;
+    }
+}
