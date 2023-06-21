@@ -1,84 +1,118 @@
 body {
-    background-color: rgb(182, 181, 181);
-    margin:0;
-    padding:0;
+  background-color: rgb(182, 181, 181);
+  margin: 0;
+  padding: 0;
 }
 header {
-    margin: 20px;
-    text-align: center;
-    font-size: 36px;
-    padding: 10px;
+  margin: 20px;
+  text-align: center;
+  font-size: 36px;
+  padding: 10px;
 }
 .hide {
-    display: none;
+  display: none;
 }
 .fadeIn {
-    animation: fadeIn 8s;
+  animation: fadeIn 5s;
 }
 
 .startingScreen {
-    position: relative;
-    display:grid;
-    grid-template-columns: auto auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
 }
 .sliders {
-    position: absolute;
-    width:50vw;
-    height:100vh;
-    z-index: 2;
-    bottom:80%;
+  position: absolute;
+  width: 50vw;
+  z-index: 2;
 }
 #leftSlider {
-    position: relative;
-    background-color: blue;
+  position: absolute;
+  background-color: rgb(29, 156, 240);
+  height: 110vh;
+  top: -80vh;
 }
 .slide-left {
-    transform: translate(-100%, 0px);
-    transition: transform 1.8s ease-in-out;
+  transform: translate(-140%, 0px);
+  transition: transform 1.8s ease-in-out;
 }
 .slide-right {
-    transform: translate(100%, 0px);
-    transition: transform 1.8s ease-in-out;
+  transform: translate(140%, 0px);
+  transition: transform 1.8s ease-in-out;
 }
 #rightSlider {
-    position: relative;
-    background-color: green;
+  position: absolute;
+  background-color: rgb(240, 29, 29);
+  height: 110vh;
+  top: -80vh;
+  left: 50vw;
+}
+#startingInstructions {
+  position: relative;
+  text-align: center;
+  margin: auto;
+  color:white;
+  font-size:1.4em;
+  z-index: 3;
+  width: 40%;
+  
 }
 #startBtn {
-    position: absolute;
-    z-index: 3;
-    left: 45%;
-    top: 50%;
+  position: absolute;
+  z-index: 3;
+  left: 45%;
+  top: 50%;
+  background: #5e5df0;
+  border-radius: 999px;
+  box-shadow: #5e5df0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
 }
 
 .mainContainer {
-    position: relative;
-    display:grid;
-    grid-template-columns: auto 5% auto;
-    justify-content:center;
-    align-content: center;
-    margin: auto;
-    text-align: center;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 5% auto;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  text-align: center;
 }
 .btnChoices {
-    position: relative;
-    width: 40vw;
-    height: 300px;
-    margin: 20px;
-    font-size: larger;
-}
-footer {
-    position: relative;
-    text-align: center;
-    bottom: -100px;
+  position: relative;
+  width: 40vw;
+  height: 300px;
+  margin: 20px;
+  font-size: larger;
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @media screena and (max-width: 768px) {
-    .mainContainer {
-        grid-template-columns: auto;
-    }
+  .mainContainer {
+    grid-template-columns: auto;
+  }
 }

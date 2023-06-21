@@ -1,5 +1,7 @@
 //Start Screen Variables
 const startBtn = document.getElementById("startBtn");
+const startingInstructions = document.getElementById("startingInstructions");
+
 const leftSlider = document.getElementById("leftSlider");
 const rightSlider = document.getElementById("rightSlider");
 
@@ -27,6 +29,7 @@ function StartGame(){
     leftSlider.classList.add("slide-left")
     rightSlider.classList.add("slide-right")
     startBtn.classList.add("hide")
+    startingInstructions.classList.add("hide")
     setTimeout(function FadeIn(){
         gameContainer.classList.add("fadeIn")
     }, 1);
@@ -54,26 +57,30 @@ async function showQuestion() {
     };
     
     try {
+
+        //fetch the response from API server
         const response = await fetch(url, options);
         const result = await response.json();
 
+        //Isolate the question from the response object
         var question = result[0].question;
 
-        //This is the full array
+        //Split the response into each individual word
         var brokenQuestion = question.split(' ');
 
+        //Find the Index of the "or" keyword
         var orIndex = brokenQuestion.indexOf("or")
 
+        //Create the first option before the "or" word
         var firstHalf = brokenQuestion.slice(0,orIndex)
         var firstChoice = firstHalf.join(" ")
         
+        //Create the second option after the "or" word and remove the word "or"
         var secondHalf = brokenQuestion.slice(orIndex)
         secondHalf.shift()
         var secondChoice = secondHalf.join(" ")
 
-        console.log(firstChoice)
-        console.log(secondChoice)
-
+        //Inject the options into the buttons
         leftChoice.innerHTML = firstChoice;
         rightChoice.innerHTML = secondChoice;
 
