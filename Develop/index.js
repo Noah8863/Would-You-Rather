@@ -55,11 +55,27 @@ async function showQuestion() {
     try {
         const response = await fetch(url, options);
         const result = await response.json();
-        console.log(result);
+
+
         var question = result[0].question;
         console.log(question);
+
+        //This is the full array
         var brokenQuestion = question.split(' ');
         console.log(brokenQuestion);
+
+        var orIndex = brokenQuestion.indexOf("or")
+        console.log(orIndex);
+
+        var firstHalf = brokenQuestion.slice(0,orIndex)
+        var firstChoice = firstHalf.join(" ")
+        console.log(firstChoice)
+
+
+        var secondHalf = brokenQuestion.slice(orIndex)
+        secondHalf.shift()
+        var secondChoice = secondHalf.join(" ")
+        console.log(secondChoice)
 
     } catch (error) {
         console.error(error);
