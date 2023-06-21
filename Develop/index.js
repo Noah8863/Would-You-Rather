@@ -6,6 +6,7 @@ const rightSlider = document.getElementById("rightSlider");
 //In Game Variables
 const leftChoice = document.getElementById("leftButton");
 const rightChoice = document.getElementById("rightButton");
+
 const leftResults = document.getElementById("leftResults");
 const rightResults = document.getElementById("rightResults");
 
@@ -56,26 +57,25 @@ async function showQuestion() {
         const response = await fetch(url, options);
         const result = await response.json();
 
-
         var question = result[0].question;
-        console.log(question);
 
         //This is the full array
         var brokenQuestion = question.split(' ');
-        console.log(brokenQuestion);
 
         var orIndex = brokenQuestion.indexOf("or")
-        console.log(orIndex);
 
         var firstHalf = brokenQuestion.slice(0,orIndex)
         var firstChoice = firstHalf.join(" ")
-        console.log(firstChoice)
-
-
+        
         var secondHalf = brokenQuestion.slice(orIndex)
         secondHalf.shift()
         var secondChoice = secondHalf.join(" ")
+
+        console.log(firstChoice)
         console.log(secondChoice)
+
+        leftChoice.innerHTML = firstChoice;
+        rightChoice.innerHTML = secondChoice;
 
     } catch (error) {
         console.error(error);
