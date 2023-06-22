@@ -29,8 +29,7 @@ header {
 #leftSlider {
   position: absolute;
   background-color: rgb(29, 156, 240);
-  height: 110vh;
-  top: -80vh;
+  height: 100vh;
 }
 .slide-left {
   transform: translate(-140%, 0px);
@@ -43,8 +42,7 @@ header {
 #rightSlider {
   position: absolute;
   background-color: rgb(240, 29, 29);
-  height: 110vh;
-  top: -80vh;
+  height: 100vh;
   left: 50vw;
 }
 #startingInstructions {
@@ -55,13 +53,17 @@ header {
   font-size:1.4em;
   z-index: 3;
   width: 40%;
-  
+  top:40vh;
+  background-color: #5e5df0;
+  padding: 30px;
+  border-radius: 25px;
 }
 #startBtn {
-  position: absolute;
+  position: relative;
   z-index: 3;
-  left: 45%;
-  top: 50%;
+  display: flex;
+  margin: auto;
+  top: 50vh;
   background: #5e5df0;
   border-radius: 999px;
   box-shadow: #5e5df0 0 10px 20px -10px;
@@ -111,8 +113,28 @@ header {
     opacity: 1;
   }
 }
-@media screena and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .mainContainer {
-    grid-template-columns: auto;
+    grid-template-columns: none;
+    grid-template-rows: auto auto;
+    height: auto;
+  }
+  #startingInstructions {
+    top:20vh;
+  }
+  #startBtn {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    margin: auto;
+    top: 30vh;
+  }
+  .btnChoices {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 40px;
+    margin: 20px;
+    font-size: larger;
   }
 }
