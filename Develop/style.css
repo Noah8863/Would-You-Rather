@@ -1,8 +1,13 @@
 body {
-  background-color: rgb(182, 181, 181);
+  background: #b92b27;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color:white;
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
+
 header {
   margin: 20px;
   text-align: center;
@@ -49,11 +54,11 @@ header {
   position: relative;
   text-align: center;
   margin: auto;
-  color:white;
-  font-size:1.4em;
+  color: white;
+  font-size: 1.4em;
   z-index: 3;
   width: 40%;
-  top:40vh;
+  top: 40vh;
   background-color: #5e5df0;
   padding: 30px;
   border-radius: 25px;
@@ -103,6 +108,7 @@ header {
   height: 300px;
   margin: 20px;
   font-size: larger;
+  color:white;
 }
 
 @keyframes fadeIn {
@@ -120,7 +126,7 @@ header {
     height: auto;
   }
   #startingInstructions {
-    top:20vh;
+    top: 20vh;
   }
   #startBtn {
     position: relative;

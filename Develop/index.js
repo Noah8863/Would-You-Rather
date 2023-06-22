@@ -1,5 +1,6 @@
 //Start Screen Variables
 const startBtn = document.getElementById("startBtn");
+const btnContainer = document.getElementById("btnContainer");
 const startingInstructions = document.getElementById("startingInstructions");
 
 const leftSlider = document.getElementById("leftSlider");
@@ -14,6 +15,7 @@ const rightResults = document.getElementById("rightResults");
 
 //Screen Variables
 const gameContainer = document.getElementById("questionsContainer");
+
 
 //Start Game Event Listener 
 startBtn.addEventListener("click", StartGame)
@@ -30,6 +32,7 @@ function StartGame(){
     rightSlider.classList.add("slide-right")
     startBtn.classList.add("hide")
     startingInstructions.classList.add("hide")
+    btnContainer.classList.add("hide")
     setTimeout(function FadeIn(){
         gameContainer.classList.add("fadeIn")
     }, 1);
@@ -40,7 +43,7 @@ const url = 'https://would-you-rather.p.rapidapi.com/wyr/random';
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '5ead5cf470msh36ab28d485526e2p1a0624jsn33e9f2c7cbfd',
+		'X-RapidAPI-Key': 'ca75b62c85mshdb48cab1b700d04p1387f4jsn794cb6953840',
 		'X-RapidAPI-Host': 'would-you-rather.p.rapidapi.com'
 	}
 };
@@ -51,7 +54,7 @@ async function showQuestion() {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '5ead5cf470msh36ab28d485526e2p1a0624jsn33e9f2c7cbfd',
+            'X-RapidAPI-Key': 'ca75b62c85mshdb48cab1b700d04p1387f4jsn794cb6953840',
             'X-RapidAPI-Host': 'would-you-rather.p.rapidapi.com'
         }
     };
