@@ -20,7 +20,7 @@
 
   ## Description of the Project 
 
-  This is a simple program that asks you a series of "Would You Rather" questions. Each time you play, the questions are different as this project makes calls to a 3rd party API server with 1000+ questions! Play along with friends are question your sanity!  
+  This is a simple program that asks you a series of "Would You Rather" questions. Each time you play, the questions are different as this project makes calls to a 3rd party API server with 1000+ questions! Play along with friends or question your sanity!  
 
   ![Would You Rather_](https://github.com/Noah8863/Would-You-Rather/assets/60634270/66c86f78-de91-423d-b7d9-42010986df51)
 
